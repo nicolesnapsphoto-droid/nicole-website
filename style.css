@@ -33,12 +33,6 @@ body{
   line-height:1.7;
 }
 
-h1, h2, h3{
-  font-family: 'Cormorant Garamond', Georgia, serif !important;
-  font-weight: 400 !important;
-  letter-spacing: 0.02em !important;
-}
-
 img{
   display:block;
   max-width:100%;
@@ -61,7 +55,7 @@ a{
 
 .brand{
   text-decoration:none;
-  font-family:"Avenir Next", Avenir, Helvetica, Arial, sans-serif;
+  font-family:"Montserrat", sans-serif;
   font-size:14px;
   letter-spacing:0.22em;
   text-transform:uppercase;
@@ -93,7 +87,7 @@ a{
   background:none;
   border:none;
   padding:0;
-  font-family:"Avenir Next", Avenir, Helvetica, Arial, sans-serif;
+  font-family:"Montserrat", sans-serif;
   letter-spacing:0.04em;
   cursor:pointer;
   transition:color 0.18s ease;
@@ -109,7 +103,7 @@ a{
 }
 
 .nav-button{
-  background:rgba(255,255,255,0.35);
+  background:var(--surface);
   border:1px solid var(--accent-dark) !important;
   color:var(--accent-dark) !important;
   padding:10px 16px !important;
@@ -129,7 +123,7 @@ a{
   top:100%;
   left:0;
   min-width:240px;
-  background:rgba(251,247,241,0.98);
+  background:var(--surface);
   backdrop-filter: blur(6px);
   border:1px solid var(--line);
   border-radius:14px;
@@ -145,11 +139,11 @@ a{
   color:var(--text);
   font-size:14px;
   white-space:nowrap;
-  font-family:"Avenir Next", Avenir, Helvetica, Arial, sans-serif;
+  font-family:"Montserrat", sans-serif;
 }
 
 .nav-dropdown-content a:hover{
-  background:rgba(139,111,87,0.06);
+  background:var(--surface-soft);
 }
 
 .nav-dropdown:hover .nav-dropdown-content,
@@ -176,13 +170,13 @@ a{
   text-transform:uppercase;
   letter-spacing:0.20em;
   font-size:11px;
-  font-family:"Avenir Next", Avenir, Helvetica, Arial, sans-serif;
+  font-family:"Montserrat", sans-serif;
 }
 
 h1, h2, h3{
-  font-family: Baskerville, "Baskerville Old Face", Garamond, "Times New Roman", serif;
-  font-weight:500;
-  letter-spacing:0.01em;
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight:400 !important;
+  letter-spacing:0.02em !important;
   color:var(--text);
 }
 
@@ -231,27 +225,27 @@ h3{
   padding:12px 18px;
   border-radius:999px;
   font-size:13px;
-  font-family:"Avenir Next", Avenir, Helvetica, Arial, sans-serif;
+  font-family:"Montserrat", sans-serif;
   letter-spacing:0.06em;
   text-transform:uppercase;
   transition:all 0.18s ease;
 }
 
 .primary-link{
-  background:linear-gradient(180deg, #d6b79d 0%, #c8a488 100%);
-  color:#2d241d;
-  box-shadow:0 10px 22px rgba(83, 65, 47, 0.11);
-  border:1px solid rgba(87,69,55,0.16);
+  background:var(--button);
+  color:#ffffff;
+  box-shadow:var(--shadow-soft);
+  border:1px solid var(--accent-dark);
 }
 
 .primary-link:hover{
-  background:linear-gradient(180deg, #d0ac8d 0%, #c09978 100%);
+  background:var(--button-hover);
   transform:translateY(-1px);
 }
 
 .secondary-link{
   border:1px solid var(--line);
-  background:rgba(255,255,255,0.45);
+  background:var(--surface);
   color:var(--accent-dark);
 }
 
@@ -265,7 +259,7 @@ h3{
   object-fit:cover;
   border-radius:18px;
   box-shadow:var(--shadow);
-  border:1px solid rgba(87,69,55,0.06);
+  border:1px solid var(--line-soft);
 }
 
 .portfolio-grid-section{
@@ -287,7 +281,7 @@ h3{
   border-radius:14px;
   grid-column:span 4;
   box-shadow:var(--shadow-soft);
-  border:1px solid rgba(87,69,55,0.06);
+  border:1px solid var(--line-soft);
 }
 
 .editorial-grid .grid-tall{
@@ -328,7 +322,7 @@ h3{
   max-height:720px;
   object-fit:cover;
   box-shadow:var(--shadow);
-  border:1px solid rgba(87,69,55,0.06);
+  border:1px solid var(--line-soft);
 }
 
 .featured-preview-section{
@@ -347,7 +341,7 @@ h3{
 
 .feature-card{
   text-decoration:none;
-  background:rgba(251,247,241,0.82);
+  background:var(--surface);
   backdrop-filter: blur(4px);
   border:1px solid var(--line-soft);
   border-radius:18px;
@@ -359,7 +353,6 @@ h3{
 .feature-card:hover{
   transform:translateY(-2px);
   box-shadow:var(--shadow);
-  background:var(--surface);
 }
 
 .feature-source{
@@ -369,7 +362,7 @@ h3{
   letter-spacing:0.16em;
   font-size:11px;
   margin-bottom:10px;
-  font-family:"Avenir Next", Avenir, Helvetica, Arial, sans-serif;
+  font-family:"Montserrat", sans-serif;
 }
 
 .feature-card h3{
@@ -385,7 +378,7 @@ h3{
 .feature-read{
   font-size:13px;
   color:var(--accent-dark);
-  font-family:"Avenir Next", Avenir, Helvetica, Arial, sans-serif;
+  font-family:"Montserrat", sans-serif;
   text-transform:uppercase;
   letter-spacing:0.08em;
 }
@@ -403,7 +396,7 @@ h3{
   letter-spacing:0.18em;
   text-transform:uppercase;
   font-size:11px;
-  font-family:"Avenir Next", Avenir, Helvetica, Arial, sans-serif;
+  font-family:"Montserrat", sans-serif;
   color:var(--accent-dark);
 }
 
@@ -464,7 +457,7 @@ h3{
     top:100%;
     left:18px;
     right:18px;
-    background:rgba(251,247,241,0.98);
+    background:var(--surface);
     backdrop-filter: blur(8px);
     border:1px solid var(--line);
     border-radius:18px;
