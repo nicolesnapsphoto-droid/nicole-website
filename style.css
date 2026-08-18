@@ -1,27 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Lato:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&display=swap');
 
 * {
   box-sizing: border-box;
 }
 
 :root {
-  --bg: #f4f3ef;
-  --surface: #ffffff;
-  --text: #1c1b1a;
-  --muted: #5c5852;
-  --line: #d8d4cb;
-  --button: #2b2927;
-  --shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+  --bg: #f4f1ea;          /* Warm earthy oatmeal */
+  --surface: #faf8f5;     /* Soft ivory surface */
+  --text: #2c2825;        /* Deep espresso brown */
+  --muted: #666059;       /* Muted taupe */
+  --line: #dcd6cd;        /* Earthy border line */
+  --button: #2c2825;      /* Dark espresso button */
+  --button-hover: #171513;
+  --shadow: 0 12px 30px rgba(44, 40, 37, 0.06);
 }
 
+/* Base Body Typography */
 body, p, span, div, a, li, button, input,
 .brand, .main-nav > a, .nav-dropbtn, .nav-button,
-.primary-link, .secondary-link, .footer-title {
-  font-family: 'Lato', sans-serif !important;
+.primary-link, .secondary-link, .feature-source, .feature-read, .footer-title {
+  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
 
-h1, h2, h3, h4 {
+/* ALL-CAPS BODONI MODA HEADINGS (Matches image 3) */
+h1, h2, h3, h4, .brand {
   font-family: 'Bodoni Moda', Georgia, serif !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  font-weight: 400 !important;
+  color: var(--text) !important;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -55,10 +66,8 @@ a {
 .brand {
   text-decoration: none;
   font-size: 14px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
+  letter-spacing: 0.22em !important;
   z-index: 1002;
-  color: var(--text);
 }
 
 .nav-toggle {
@@ -79,18 +88,19 @@ a {
   text-decoration: none;
   font-size: 11px;
   color: var(--muted);
-  letter-spacing: 0.15em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
 }
 
 .nav-button {
   background: var(--button) !important;
   color: #ffffff !important;
-  padding: 10px 20px !important;
+  padding: 10px 22px !important;
   border-radius: 999px !important;
-  letter-spacing: 0.15em !important;
-  text-transform: uppercase;
+  letter-spacing: 0.18em !important;
+  text-transform: uppercase !important;
   text-decoration: none;
+  font-size: 11px !important;
 }
 
 .nav-dropdown {
@@ -115,43 +125,45 @@ a {
   display: block;
   padding: 10px 18px;
   text-decoration: none;
-  font-size: 12px;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .nav-dropdown:hover .nav-dropdown-content {
   display: block;
 }
 
-/* HERO */
+/* HERO SECTION */
 .hero-editorial {
-  max-width: 900px;
+  max-width: 860px;
   margin: 0 auto;
   padding: 30px 20px 40px;
   text-align: center;
 }
 
 .eyebrow {
-  margin: 0 0 10px;
+  margin: 0 0 12px;
   color: var(--muted);
   text-transform: uppercase;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.22em;
   font-size: 10px;
 }
 
 h1 {
   font-size: 38px;
   line-height: 1.15;
-  margin: 0 0 16px;
+  margin: 0 0 18px;
 }
 
 .intro {
   font-size: 15px;
   color: var(--muted);
-  margin: 0 auto 20px;
-  max-width: 540px;
+  margin: 0 auto 24px;
+  max-width: 520px;
 }
 
-/* BUTTONS */
+/* UNIFORM ALL-CAPS PILL BUTTONS */
 .hero-actions, .about-actions {
   display: flex;
   justify-content: center;
@@ -162,12 +174,13 @@ h1 {
 
 .primary-link, .secondary-link {
   text-decoration: none !important;
-  padding: 12px 24px !important;
+  padding: 12px 26px !important;
   border-radius: 999px !important;
   font-size: 11px !important;
   letter-spacing: 0.18em !important;
   text-transform: uppercase !important;
   display: inline-block !important;
+  transition: all 0.2s ease;
 }
 
 .primary-link {
@@ -177,16 +190,20 @@ h1 {
 }
 
 .secondary-link {
-  border: 1px solid var(--line) !important;
+  border: 1px solid var(--button) !important;
   background: var(--surface) !important;
   color: var(--text) !important;
+}
+
+.primary-link:hover, .secondary-link:hover {
+  transform: translateY(-1px);
 }
 
 .hero-image {
   width: 100%;
   max-height: 550px;
   object-fit: cover;
-  border-radius: 18px;
+  border-radius: 20px;
   margin-top: 20px;
   box-shadow: var(--shadow);
 }
@@ -220,7 +237,7 @@ h1 {
 
 .about-layout {
   display: grid;
-  grid-template-columns: 1fr 300px;
+  grid-template-columns: 1fr 320px;
   gap: 40px;
   align-items: center;
   max-width: 1000px;
@@ -237,7 +254,7 @@ h1 {
   width: 100%;
   max-height: 380px;
   object-fit: cover;
-  border-radius: 18px;
+  border-radius: 20px;
   box-shadow: var(--shadow);
 }
 
@@ -249,7 +266,13 @@ h1 {
   color: var(--muted);
 }
 
-/* MOBILE FIXES */
+.footer-title {
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+/* MOBILE RESPONSIVE NAV FIX */
 @media (max-width: 900px) {
   .nav-toggle-label {
     display: flex !important;
