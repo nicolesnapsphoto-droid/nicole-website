@@ -1,21 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Montserrat:wght@300;400;500&display=swap');
+
 *{
   box-sizing:border-box;
 }
 
 :root{
-  --bg:#f4eee6;
-  --surface:#fbf7f1;
-  --surface-soft:#f1e7da;
-  --text:#2f2823;
-  --muted:#6f655c;
-  --line:#d7c8b9;
-  --line-soft:#e6dbcf;
-  --accent:#8b6f57;
-  --accent-dark:#574537;
-  --button:#cdb29b;
-  --button-hover:#c29f84;
-  --shadow:0 16px 34px rgba(52, 40, 29, 0.08);
-  --shadow-soft:0 8px 20px rgba(52, 40, 29, 0.05);
+  --bg:#f0f1ec;
+  --surface:#f7f8f4;
+  --surface-soft:#e6e8e1;
+  --text:#222421;
+  --muted:#62665e;
+  --line:#cdcfc6;
+  --line-soft:#dcdec7;
+  --accent:#737a6b;
+  --accent-dark:#3b3e37;
+  --button:#3b3e37;
+  --button-hover:#222421;
+  --shadow:0 20px 40px rgba(30, 35, 28, 0.05);
+  --shadow-soft:0 10px 25px rgba(30, 35, 28, 0.03);
 }
 
 html{
@@ -24,13 +26,17 @@ html{
 
 body{
   margin:0;
-  font-family: Baskerville, "Baskerville Old Face", Garamond, "Times New Roman", serif;
-  background:
-    radial-gradient(circle at top left, rgba(255,255,255,0.58), transparent 30%),
-    radial-gradient(circle at bottom right, rgba(214,190,162,0.10), transparent 28%),
-    linear-gradient(180deg, #f7f2eb 0%, #f1e9de 100%);
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--bg);
+  background-image: radial-gradient(circle at 50% 30%, #f6f7f2 0%, #ebede5 100%);
   color:var(--text);
-  line-height:1.65;
+  line-height:1.7;
+}
+
+h1, h2, h3{
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.02em !important;
 }
 
 img{
