@@ -20,13 +20,22 @@
   --shadow-soft:0 6px 16px rgba(0, 0, 0, 0.02);
 }
 
+body, p, span, div, a, li, button, input,
+.brand, .main-nav > a, .nav-dropbtn, .nav-button,
+.primary-link, .secondary-link, .feature-source, .feature-read, .footer-title {
+  font-family: 'Lato', sans-serif !important;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Bodoni Moda', Georgia, serif !important;
+}
+
 html{
   scroll-behavior:smooth;
 }
 
 body{
   margin:0;
-  font-family: 'Lato', sans-serif;
   font-weight: 300;
   background-color: var(--bg);
   color:var(--text);
@@ -57,7 +66,6 @@ a{
 
 .brand{
   text-decoration:none;
-  font-family:"Bodoni Moda", serif;
   font-size:15px;
   letter-spacing:0.25em;
   text-transform:uppercase;
@@ -89,7 +97,6 @@ a{
   background:none;
   border:none;
   padding:0;
-  font-family:'Lato', sans-serif;
   letter-spacing:0.15em;
   text-transform: uppercase;
   cursor:pointer;
@@ -106,13 +113,17 @@ a{
 }
 
 .nav-button{
-  background:transparent;
-  border:1px solid var(--text) !important;
-  color:var(--text) !important;
+  background:var(--button) !important;
+  color:#ffffff !important;
+  border:1px solid var(--button) !important;
   padding:8px 18px !important;
-  border-radius:0px;
+  border-radius:0px !important;
   letter-spacing:0.18em !important;
   text-transform:uppercase;
+}
+
+.nav-button:hover{
+  background:var(--button-hover) !important;
 }
 
 .nav-dropdown{
@@ -143,7 +154,6 @@ a{
   letter-spacing:0.08em;
   text-transform:uppercase;
   white-space:nowrap;
-  font-family:'Lato', sans-serif;
 }
 
 .nav-dropdown-content a:hover{
@@ -174,11 +184,9 @@ a{
   text-transform:uppercase;
   letter-spacing:0.25em;
   font-size:10px;
-  font-family:'Lato', sans-serif;
 }
 
 h1, h2, h3{
-  font-family: 'Bodoni Moda', Georgia, serif !important;
   font-weight:400 !important;
   letter-spacing:0.05em !important;
   text-transform: uppercase;
@@ -228,9 +236,8 @@ h3{
 .secondary-link{
   text-decoration:none;
   padding:14px 24px;
-  border-radius:0px; /* Square edges look more editorial */
+  border-radius:0px;
   font-size:11px;
-  font-family:'Lato', sans-serif;
   letter-spacing:0.2em;
   text-transform:uppercase;
   transition:all 0.2s ease;
@@ -331,7 +338,6 @@ h3{
   letter-spacing:0.2em;
   font-size:10px;
   margin-bottom:12px;
-  font-family:'Lato', sans-serif;
 }
 
 .feature-card h3{
@@ -346,7 +352,6 @@ h3{
 .feature-read{
   font-size:11px;
   color:var(--text);
-  font-family:'Lato', sans-serif;
   text-transform:uppercase;
   letter-spacing:0.15em;
 }
@@ -365,7 +370,6 @@ h3{
   letter-spacing:0.22em;
   text-transform:uppercase;
   font-size:10px;
-  font-family:'Lato', sans-serif;
   color:var(--text);
 }
 
